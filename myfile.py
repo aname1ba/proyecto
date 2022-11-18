@@ -13,7 +13,7 @@ datos = pd.read_csv(url, sep=',')
 st.title('Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
 st.write('sismos')
 
-st.subheades('Gráficas')
+st.subheader('Gráficas')
 
 
 

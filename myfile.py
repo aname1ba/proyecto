@@ -28,5 +28,5 @@ print(datos)
 #MAPA
 st.title('Ejemplo mapa')
 df = pd.DataFrame(
-    columns=['lat', 'lon'])
+    columns=['LATITUD', 'LONGITUD'])
 st.map(df)

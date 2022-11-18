@@ -34,5 +34,5 @@ st.map(df)
 #otro mapa
 st.subheader('otro mapa')
 df = pd.DataFrame(
-    np.(columns=['lat', 'lon']))
+    np.(columns=['LATITUD', 'LONGITUD']))
 st.map(df)

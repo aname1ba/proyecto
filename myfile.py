@@ -5,11 +5,11 @@ import pandas as pd
 import numpy as np
 import urllib.request 
 
-st.title('SISMOS')
-def download_data():
-  url = "https://www.datosabiertos.gob.pe/dataset/catalogo-sismico/resource/f9629081-0721-4101-a2c2-d0622e046f8b#{}"
-  filename = ""
-  urllib.request.urlretrieve(url,filename) 
+#st.title('SISMOS')
+#def download_data():
+url = "https://github.com/aname1ba/proyecto/blob/main/Catalogo1960_2021.csv"
+#  filename = ""
+#  urllib.request.urlretrieve(url,filename) 
 
 #para gráficas de una línea
 st.title('Sismos')

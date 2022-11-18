@@ -14,5 +14,5 @@ st.write('sismos')
 url = "https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021.csv"
 file = pd.read_csv(url, sep=',')
 
-st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
+
 

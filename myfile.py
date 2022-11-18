@@ -30,3 +30,4 @@ st.title('Ejemplo mapa')
 df = pd.DataFrame(
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
+print(df)

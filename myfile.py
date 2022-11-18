@@ -30,9 +30,3 @@ st.title('Ejemplo mapa')
 df = pd.DataFrame(
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
-
-#otro mapa
-st.subheader('otro mapa')
-df1 = pd.DataFrame(
-    np.(columns=['LATITUD', 'LONGITUD']))
-st.map(df1)

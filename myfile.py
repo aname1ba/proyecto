@@ -12,6 +12,7 @@ st.title('Sismos')
 st.write('sismos')
 
 url = "https://github.com/aname1ba/proyecto/blob/main/Catalogo1960_2021.csv?raw=true"
+file = pd.read_csv(url, sep=',')
 
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 

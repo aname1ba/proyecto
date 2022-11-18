@@ -31,3 +31,9 @@ df = pd.DataFrame(
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
 print(df)
+
+#otro mapa
+st.subheader('otro mapa')
+df=pd.DataFrame(
+    np.random.rndn(1000, 2)/[50, 50]+[37.76, -122.4], columns=['lat', 'lon'])
+st.map(df)

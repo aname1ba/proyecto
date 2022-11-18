@@ -18,6 +18,7 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
 #GRÁFICA FECHA VS MAGNITUD
+st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 print(datos)
 
@@ -26,7 +27,7 @@ print(datos)
 
 
 #MAPA
-st.title('Ejemplo mapa')
+st.subheader('Ejemplo mapa')
 df = pd.DataFrame(
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)

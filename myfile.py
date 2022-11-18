@@ -11,7 +11,7 @@ import urllib.request
 st.title('Sismos')
 st.write('sismos')
 
-url = "https://github.com/aname1ba/proyecto/blob/main/Catalogo1960_2021.csv"
+url = "https://github.com/aname1ba/proyecto/blob/main/Catalogo1960_2021.csv?raw=true"
 
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 

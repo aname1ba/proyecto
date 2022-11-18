@@ -14,5 +14,5 @@ def download_data():
 #para gráficas de una línea
 st.title('Sismos')
 st.write('Analicemos los sismos')
-st.line_chart(data=datos, x='Date', y='Price')
+st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 

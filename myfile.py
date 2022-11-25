@@ -32,7 +32,6 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 #MAPA
 st.subheader('Ejemplo mapa')
 df = pd.DataFrame( 
-    data=datos,
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
 

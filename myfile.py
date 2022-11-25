@@ -41,3 +41,6 @@ print(datos)
 #REFERENCIAS
 st.subheader('Referencias')
 st.write('1. Indtituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
+url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021-lat%26lon.csv'
+datos2=pd.read_csv(url2, sep=',')
+st.map(datos2)

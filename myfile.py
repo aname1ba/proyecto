@@ -35,6 +35,40 @@ df = pd.DataFrame(
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
 
+st.pydeck_chart(pdk.Deck(
+    map_style=None,
+    initial_view_state=pdk.ViewState(
+        latitude= -25,
+        longitude= -80,
+        zoom= 11,
+        pitch= 50,
+    ),
+    layers=[
+        pdk.Layer(
+            "HexagonLayer",
+            data=datos,
+            get_position= ['LATITUD', 'LONGITUD'],
+            radius=200,
+            elevation_scale=4,
+            elevation_range=[0,1000],
+            pickable=True,
+            extruded=True,
+        ),
+        pdk.Layer(
+            "ScatterplotLayer",
+            data=datos,
+            get_position=['LATITUD', 'LONGITUD'],
+            get_color='[200, 30, 0, 160]',
+            get_radius=200,
+        ),
+    ],
+))
+
+#MAPA
+st.subheader('Ejemplo mapa')
+df = pd.DataFrame(
+    columns=['LATITUD', 'LONGITUD'])
+st.map(df)
 
 #REFERENCIAS
 st.subheader('Referencias')

@@ -62,9 +62,7 @@ st.pydeck_chart(pdk.Deck(
 
 #MAPA
 st.subheader('Ejemplo mapa')
-df = pd.DataFrame(
-    columns=['LATITUD', 'LONGITUD'])
-st.map(df)
+df = pd.DataFrame(https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021.csv)
 
 #REFERENCIAS
 st.subheader('Referencias')

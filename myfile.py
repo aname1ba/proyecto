@@ -9,6 +9,7 @@ import urllib.request
 #URL
 url = "https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021.csv"
 datos = pd.read_csv(url, sep=',')
+st.map(datos)
 
 #TITULO
 st.title('Sismos en el Perú desde 1960 hasta el 2021 según el IGP')

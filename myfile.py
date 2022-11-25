@@ -28,43 +28,18 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 #GRÁFICA PROFUNDIDAD VS MAGNITUD
 
 
-
 #MAPA
 
-st.pydeck_chart(pdk.Deck(
-    map_style=None,
-    initial_view_state=pdk.ViewState(
-        latitude= -25,
-        longitude= -80,
-        zoom= 11,
-        pitch= 50,
-    ),
-    layers=[
-        pdk.Layer(
-            "HexagonLayer",
-            data=datos,
-            get_position= ['LATITUD', 'LONGITUD'],
-            radius=200,
-            elevation_scale=4,
-            elevation_range=[0,1000],
-            pickable=True,
-            extruded=True,
-        ),
-        pdk.Layer(
-            "ScatterplotLayer",
-            data=datos,
-            get_position=['LATITUD', 'LONGITUD'],
-            get_color='[200, 30, 0, 160]',
-            get_radius=200,
-        ),
-    ],
-))
 
 #MAPA
 st.subheader('Ejemplo mapa')
-df = pd.DataFrame(https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021.csv)
+df = pd.DataFrame(
+    columns=['LATITUD', 'LONGITUD'])
+st.map(df)
 
 #REFERENCIAS
 st.subheader('Referencias')
 st.write('1. Indtituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
 
+
+st.pydeck_chart(data=datos, x='MAGNITUD', y=['LATITUD','MAGNITUD')

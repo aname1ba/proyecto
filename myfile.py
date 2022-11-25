@@ -27,38 +27,11 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 
 #GRÁFICA PROFUNDIDAD VS MAGNITUD
 
-st.pydeck_chart(pdk.Deck(
-    map_style=None,
-    initial_view_state=pdk.ViewState(
-        latitude= -25,
-        longitude= -80,
-        zoom= 11,
-        pitch= 50,
-    ),
-    layers=[
-        pdk.Layer(
-            "HexagonLayer",
-            data=datos,
-            get_position= ['LATITUD', 'LONGITUD'],
-            radius=200,
-            elevation_scale=4,
-            elevation_range=[0,1000],
-            pickable=True,
-            extruded=True,
-        ),
-        pdk.Layer(
-            "ScatterplotLayer",
-            data=datos,
-            get_position=['LATITUD', 'LONGITUD'],
-            get_color='[200, 30, 0, 160]',
-            get_radius=200,
-        ),
-    ],
-))
+
 
 #MAPA
 st.subheader('Ejemplo mapa')
-df = pd.DataFrame(
+df = pd.DataFrame( data=datos,
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
 

@@ -10,7 +10,6 @@ import urllib.request
 url = "https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021.csv"
 datos = pd.read_csv(url, sep=',')
 
-
 #TITULO
 st.title('Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
 
@@ -19,25 +18,25 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
-#GRÁFICA FECHA VS MAGNITUD
-st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021')
-st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
-print(datos)
-
-
-st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 horas 33 minutos, ocurrio un terremoto destructor de una magnitud de 8.4 que afectó el Sur del Perú, particularmente los Departamentos de Moquegua, Tacna y Arequipa. Este sismo tuvo características importantes entre las que se destaca la complejidad de su registro y ocurrencia. El terremoto ha originado varios miles de post-sacudidas o réplicas y alcanzó una intensidad máxima de VIII. Las localidades más afectadas por el terremoto fueron las ciudades de Moquegua, Tacna, Arequipa, Valle de Tambo, Caravelí, Chuquibamba, Ilo, algunos pueblos del interior y Camaná por el efecto del Tsunami.')
-
-#GRÁFICA PROFUNDIDAD VS MAGNITUD
-
-
-#MAPA
-
-
 #MAPA
 st.subheader('Ejemplo mapa')
 df = pd.DataFrame(
     columns=['LATITUD', 'LONGITUD'])
 st.map(df)
+
+#GRÁFICA FECHA VS MAGNITUD
+st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC')
+st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
+print(datos)
+
+st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 horas 33 minutos, ocurrio un terremoto destructor de una magnitud de 8.4 que afectó el Sur del Perú, particularmente los Departamentos de Moquegua, Tacna y Arequipa. Este sismo tuvo características importantes entre las que se destaca la complejidad de su registro y ocurrencia. El terremoto ha originado varios miles de post-sacudidas o réplicas y alcanzó una intensidad máxima de VIII. Las localidades más afectadas por el terremoto fueron las ciudades de Moquegua, Tacna, Arequipa, Valle de Tambo, Caravelí, Chuquibamba, Ilo, algunos pueblos del interior y Camaná por el efecto del Tsunami.')
+
+#GRÁFICA HORA VS MAGNITUD
+st.write('Gráfica 2. Magnitud de sismos desde 1960 hasta 2021 contra Hora UTC')
+st.line_chart(data=datos, x='HORA_UTC', y='MAGNITUD')
+print(datos)
+
+
 
 #REFERENCIAS
 st.subheader('Referencias')

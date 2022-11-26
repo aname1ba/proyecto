@@ -24,7 +24,7 @@ st.subheader('Ejemplo mapa')
 df_mapa=pd.read_csv('Catalogo1960_2021-lat&lon.csv')
 
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
-    columns=['LATITUD', 'LONGITUD'])
+
 st.map(df)
 
 #GRÁFICA FECHA VS MAGNITUD

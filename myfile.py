@@ -21,7 +21,7 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 #MAPA
 st.subheader('Ejemplo mapa')
 
-df_mapa=pd.read_csv('Catalogo1960_2021-lat&lon.csv')
+df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 

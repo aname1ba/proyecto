@@ -49,7 +49,7 @@ st.write('1. Indtituto Nacional de Defensa Civil (2006) Sismos ocurridos en el P
 
 url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
 datos2= pd.read_csv(url2, sep=',')
-st.map(datos2)
+#st.map(datos2)
 
 #resumen
 df.table(datos2)

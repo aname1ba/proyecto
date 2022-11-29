@@ -29,7 +29,7 @@ df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 
-df=pd.DataFrame(
+pd.DataFrame(df_mapa)
 
 #mapa profesor
 st.pydeck_chart(pdk.Deck(

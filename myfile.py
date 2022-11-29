@@ -29,6 +29,8 @@ df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 
+df=pd.DataFrame(
+
 #mapa profesor
 st.pydeck_chart(pdk.Deck(
     map_style=None,
@@ -41,13 +43,20 @@ st.pydeck_chart(pdk.Deck(
     layers=[
         pdk.Layer(
            'HexagonLayer',
-           data=chart_data,
+           data=,
            get_position='[lon, lat]',
            radius=10, #acumula los valores
            elevation_scale=9, #da una escala de 0 a 9
            elevation_range=[0, 22711], # total de posibles valores
            pickable=True,
            extruded=True,
+        ),
+        pdk.Layer(
+            'ScatterplotLayer',
+            data=chart_data,
+            get_position='[lon, lat]',
+            get_color='[200, 30, 0, 160]',
+            get_radius=200,
         ),
     ],
 ))

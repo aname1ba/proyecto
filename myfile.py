@@ -18,14 +18,42 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
+
+#TABLA DE DATOS
+url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
+datos2= pd.read_csv(url2, sep=',')
+#st.map(datos2)
+st.table(datos2)
+
+
 #MAPA
-st.subheader('Ejemplo mapa')
+st.subheader('Datos en el mapa')
 
 df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 
-
+st.pydeck_chart(pdk.Deck(
+    map_style=None,
+    initial_view_state=pdk.ViewState(
+        latitude=37.76,
+        longitude=-122.4,
+        zoom=5,
+        pitch=70,
+    ),
+    layers=[
+        pdk.Layer(
+           'HexagonLayer',
+           data=chart_data,
+           get_position='[lon, lat]',
+           radius=200, #acumula los valores
+           elevation_scale=4, #da una escala de 0 a 4
+           elevation_range=[0, 1000], # total de posibles valores
+           pickable=True,
+           extruded=True,
+        ),
+    ],
+))
 
 #GRÁFICA FECHA VS MAGNITUD
 st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC')
@@ -39,7 +67,7 @@ st.write('Gráfica 2. Magnitud de sismos desde 1960 hasta 2021 contra Hora UTC')
 st.line_chart(data=datos, x='HORA_UTC', y='MAGNITUD')
 print(datos)
 
-#para tabla
+
 
 
 #REFERENCIAS
@@ -47,10 +75,5 @@ st.subheader('Referencias')
 st.write('1. Indtituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
 
 
-url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
-datos2= pd.read_csv(url2, sep=',')
-#st.map(datos2)
 
-#resumen
-st.table(datos2)
 

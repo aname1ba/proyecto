@@ -19,11 +19,7 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
 
-#TABLA DE DATOS
-url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
-datos2= pd.read_csv(url2, sep=',')
-#st.map(datos2)
-st.table(datos2)
+
 
 
 #MAPA
@@ -33,11 +29,12 @@ df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 
+#mapa profesor
 st.pydeck_chart(pdk.Deck(
     map_style=None,
     initial_view_state=pdk.ViewState(
-        latitude=37.76,
-        longitude=-122.4,
+        latitude=-9.1899,
+        longitude=-75.0151,
         zoom=5,
         pitch=70,
     ),
@@ -46,9 +43,9 @@ st.pydeck_chart(pdk.Deck(
            'HexagonLayer',
            data=chart_data,
            get_position='[lon, lat]',
-           radius=200, #acumula los valores
-           elevation_scale=4, #da una escala de 0 a 4
-           elevation_range=[0, 1000], # total de posibles valores
+           radius=10, #acumula los valores
+           elevation_scale=9, #da una escala de 0 a 9
+           elevation_range=[0, 22711], # total de posibles valores
            pickable=True,
            extruded=True,
         ),
@@ -68,7 +65,11 @@ st.line_chart(data=datos, x='HORA_UTC', y='MAGNITUD')
 print(datos)
 
 
-
+#TABLA DE DATOS
+url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
+datos2= pd.read_csv(url2, sep=',')
+#st.map(datos2)
+st.table(datos2)
 
 #REFERENCIAS
 st.subheader('Referencias')

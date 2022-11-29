@@ -33,8 +33,8 @@ st.map(df)
 st.pydeck_chart(pdk.Deck(
     map_style=None,
     initial_view_state=pdk.ViewState(
-        latitude=-9.1899,
-        longitude=-75.0151,
+        latitude=38.904,
+        longitude=-77.016
         zoom=5,
         pitch=70,
     ),
@@ -70,6 +70,7 @@ url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_20
 datos2= pd.read_csv(url2, sep=',')
 #st.map(datos2)
 st.table(datos2)
+
 
 #REFERENCIAS
 st.subheader('Referencias')

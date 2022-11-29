@@ -22,10 +22,10 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 st.subheader('Ejemplo mapa')
 
 df_mapa=pd.read_csv('Catalogo1960_2021.csv')
-
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
-
 st.map(df)
+
+
 
 #GRÁFICA FECHA VS MAGNITUD
 st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC')
@@ -39,6 +39,7 @@ st.write('Gráfica 2. Magnitud de sismos desde 1960 hasta 2021 contra Hora UTC')
 st.line_chart(data=datos, x='HORA_UTC', y='MAGNITUD')
 print(datos)
 
+#para tabla
 
 
 #REFERENCIAS
@@ -47,3 +48,8 @@ st.write('1. Indtituto Nacional de Defensa Civil (2006) Sismos ocurridos en el P
 url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
 datos2= pd.read_csv(url2, sep=',')
 st.map(datos2)
+
+
+#resumen
+df.table(url2)
+

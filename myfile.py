@@ -52,5 +52,5 @@ datos2= pd.read_csv(url2, sep=',')
 #st.map(datos2)
 
 #resumen
-df.table(datos2)
+st.table(datos2)
 

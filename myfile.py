@@ -30,7 +30,7 @@ df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 
 url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
-df=pd.DataFrame(url2)
+df=pd.read_csv(url2)
 
 #mapa profesor
 st.pydeck_chart(pdk.Deck(

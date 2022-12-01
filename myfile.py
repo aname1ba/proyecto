@@ -37,7 +37,7 @@ st.pydeck_chart(pdk.Deck(
     map_style=None,
     initial_view_state=pdk.ViewState(
         latitude=38.904,
-        longitude=-77.016
+        longitude=-77.016,
         zoom=5,
         pitch=70,
     ),

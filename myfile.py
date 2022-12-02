@@ -36,6 +36,12 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 
 
 #RESUMEN de los datos
+urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen%20catalogo%20sismos.csv'
+datosr = pd.read_csv(urlr, sep=',')
+st.table(datosr)
+
+
+#MAPA del resumen
 
 
 

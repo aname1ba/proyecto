@@ -58,7 +58,7 @@ st.write('*Tabla 1. Resumen de 21 datos aleatorios*')
 urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_Catalogo_Sismos1960-2021.csv'
 datosr = pd.read_csv(urlr, sep=',')
 st.table(datosr)
-
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 st.write(' ')
 st.write(' ')
 st.write(' ')
@@ -71,6 +71,7 @@ st.write('*Mapa 2. Resumen de 21 datos aleatorios*')
 df_mapa2 = pd.read_csv('Resumen_Catalogo_Sismos1960-2021.csv')
 df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df2)
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
@@ -83,12 +84,14 @@ st.write('*Tabla 2. Los 10 valores con mayor magnitud*')
 urlM = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MAYORvalor.csv'
 datosM = pd.read_csv(urlM, sep=',')
 st.table(datosM)
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #mapa
 st.write('*Mapa 3. Los 10 valores con mayor magnitud registrado*')
 df_mapa3 = pd.read_csv('MAYORvalor.csv')
 df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df3)
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 4: TABLA Y MAPA DE LOS VALORES CON MENOR MAGNITUD
 st.write(' ')
@@ -100,12 +103,14 @@ st.write('*Tabla 3. Los 10 valores con menor magnitud*')
 urlm = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MENORvalor.csv'
 datosm = pd.read_csv(urlm, sep=',')
 st.table(datosm)
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #mapa
 st.write('*Mapa 4. Los 10 valores con menor magnitud*')
 df_mapa4 = pd.read_csv('MENORvalor.csv')
 df4 = df_mapa4.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df4)
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 
 #SUBHEADER 5: REFERENCIAS

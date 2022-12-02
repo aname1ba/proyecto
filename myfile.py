@@ -76,7 +76,7 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
 st.write(' ')
-st.write(' ')
+st.write('Se ordenaron y seleccionaron 10 valores con mayor magnitud sísmica registrada y fueron presentadas en la Tabla 2.')
 st.subheader('Sismos con mayor magnitud')
 
 #tabla
@@ -87,6 +87,8 @@ st.table(datosM)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #mapa
+st.write('Los valores de la tabla fueron representadas en el Mapa 3 en donde se puede apreciar que el epicentro de los sismos registrados se encuentran ubicados en el Océano Pacífico.')
+
 st.write('*Mapa 3. Los 10 valores con mayor magnitud registrado*')
 df_mapa3 = pd.read_csv('MAYORvalor.csv')
 df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})

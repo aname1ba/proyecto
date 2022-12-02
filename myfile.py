@@ -49,7 +49,7 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
 st.subheader('Resumen')
-st.write('Se tomaron 21 valores al azar del catálogo sísimico y fueron presentado en la Tabla 1. Para obtener estos valores se crearon 21 grupos del cual cada 1 contenía 3 años y con la función ALEATORIO.ENTRE() en excel se obtuvieron los valores.')
+st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
 
 #resumen
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')

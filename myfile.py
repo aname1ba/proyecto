@@ -34,8 +34,6 @@ st.map(df)
 
 
 #gráfica
-st.write(' ')
-st.write(' ')
 st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1 ')
 st.write('*Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC*')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')

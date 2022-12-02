@@ -26,6 +26,7 @@ df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 
 
+
 #GRÁFICA FECHA VS MAGNITUD
 st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')

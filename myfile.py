@@ -49,6 +49,7 @@ print(datos)
 
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
 st.subheader('Resumen')
+st.write('Se tomaron 21 valores al azar del catálogo sísimico los cuales son presentados en la Tabla 1.')
 
 #resumen
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')

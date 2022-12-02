@@ -63,10 +63,9 @@ st.write(' ')
 st.write(' ')
 st.write(' ')
 
-
+#mapa
 st.write('En el Mapa 2 se representa los 21 puntos obtenidos de forma aleatoriamente de la Tabla 1 en el mapa.')
 
-#mapa
 st.write('*Mapa 2. Resumen de 21 datos aleatorios*')
 df_mapa2 = pd.read_csv('Resumen_Catalogo_Sismos1960-2021.csv')
 df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
@@ -76,8 +75,8 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
 st.write(' ')
-st.write('Se ordenaron y seleccionaron 10 valores con mayor magnitud sísmica registrada y fueron presentadas en la Tabla 2.')
 st.subheader('Sismos con mayor magnitud')
+st.write('Se ordenaron y seleccionaron 10 valores con mayor magnitud sísmica registrada y fueron presentadas en la Tabla 2.')
 
 #tabla
 st.write('*Tabla 2. Los 10 valores con mayor magnitud*')
@@ -99,6 +98,7 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 st.write(' ')
 st.write(' ')
 st.subheader('Sismos con menor magnitud')
+st.write('Del catálogo sísmico se ordenaron las ***Magnitudes*** registradas de menor a mayor y se seleccionaron los 10 primeros valores  fueron presentadas en la Tabla 2.')
 
 #tabla
 st.write('*Tabla 3. Los 10 valores con menor magnitud*')

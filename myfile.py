@@ -45,11 +45,11 @@ st.write('El 23 de Junio de 2001 a las 15 horas con 33 minutos, ocurrio un terre
 st.write('*Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC*')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 print(datos)
-
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
 st.subheader('Resumen')
-st.write('Se tomaron 21 valores al azar del catálogo sísimico los cuales son presentados en la Tabla 1.')
+st.write('Se tomaron 21 valores al azar del catálogo sísimico y fueron presentado en la Tabla 1. Para obtener estos valores se crearon 21 grupos del cual cada 1 contenía 3 años y con la función ALEATORIO.ENTRE() en excel se obtuvieron los valores.')
 
 #resumen
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')

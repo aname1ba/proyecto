@@ -20,6 +20,9 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 
 st.write('Para visualizar la tabla completa de todos los datos registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
 
+#SUBHEADER 1
+st.subheader('Presentación del Catálogo Sísmico')
+
 #MAPA DE TODOS LOS DATOS
 st.write('Los valores de ***Longitud*** y ***Latitud*** fueron ubicados en el Mapa 1 presentado a continuación:')
 st.write('*Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP*')
@@ -36,6 +39,8 @@ print(datos)
 
 st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 horas 33 minutos, ocurrio un terremoto destructor de una magnitud de 8.4 que afectó el Sur del Perú, particularmente los Departamentos de Moquegua, Tacna y Arequipa. Este sismo tuvo características importantes entre las que se destaca la complejidad de su registro y ocurrencia. El terremoto ha originado varios miles de post-sacudidas o réplicas y alcanzó una intensidad máxima de VIII. Las localidades más afectadas por el terremoto fueron las ciudades de Moquegua, Tacna, Arequipa, Valle de Tambo, Caravelí, Chuquibamba, Ilo, algunos pueblos del interior y Camaná por el efecto del Tsunami.')
 
+#SUBHEADER 2
+st.subheader('Resumen del catálogo sísmico')
 
 #RESUMEN DE DATOS
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')
@@ -51,6 +56,9 @@ df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df2)
 
 
+#SUBHEADER 3
+st.subheader('Casos con mayor magnitud')
+
 #TABLA MAYOR
 st.write('*Tabla 2. Los 10 valores con mayor magnitud*')
 urlM = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MAYORvalor.csv'
@@ -58,11 +66,13 @@ datosM = pd.read_csv(urlM, sep=',')
 st.table(datosM)
 
 #MAPA MAYOR
-st.write('*Mapa 3. Los 10 valores con mayor magnitud*')
+st.write('Mapa 3. Los 10 valores con mayor magnitud registrado')
 df_mapa3 = pd.read_csv('MAYORvalor.csv')
 df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df3)
 
+#SUBHEADER 4
+st.subheader('Casos con menor magnitud registrado')
 
 #TABLA MENOR
 st.write('*Tabla 3. Los 10 valores con menor magnitud*')

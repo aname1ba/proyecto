@@ -7,7 +7,7 @@ import pydeck as pdk
 import urllib.request 
 
 #URL
-url = "https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo1960_2021.csv"
+url = "https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo_sismos_nuevoformato.csv"
 datos = pd.read_csv(url, sep=',')
 
 #TITULO
@@ -28,7 +28,7 @@ st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fue
 
 #mapa
 st.write('Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
-df_mapa=pd.read_csv('Catalogo1960_2021.csv')
+df_mapa=pd.read_csv('Catalogo_sismos_nuevoformato.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')

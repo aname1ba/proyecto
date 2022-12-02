@@ -18,10 +18,10 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
-st.write('Para visualizar la tabla completa de todos los datos registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
+st.write('Para visualizar la tabla completa de todos los datos registrados por el IGP visita el siguiente [Link](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
 
-#MAPA TODOS LOS DATOS
-st.write('*Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP*')
+#MAPA todos los datos 
+st.write('Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
 df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
@@ -29,7 +29,7 @@ st.map(df)
 
 
 #GRÁFICA FECHA VS MAGNITUD
-st.write('*Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC*')
+st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 print(datos)
 
@@ -37,47 +37,48 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 
 
 #RESUMEN de los datos
-st.write('*Tabla 1. Resumen de 20 datos aleatorios*')
+st.write('Tabla 1. Resumen de 21 datos aleatorios')
 urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_catalogo_sismos.csv'
 datosr = pd.read_csv(urlr, sep=',')
 st.table(datosr)
 
 
 #MAPA del resumen
-st.write('*Mapa 2. Resumen de 20 datos aleatorios*')
+st.write('Mapa 2. Resumen de 21 datos aleatorios')
 df_mapa2 = pd.read_csv('Resumen_catalogo_sismos.csv')
-df = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
+df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
+st.map(df2)
 
 
 #TABLA MAYOR
-st.write('*Tabla 2. Los 10 primeros valores con mayor magnitud*')
+st.write('Tabla 2. Los 10 valores con mayor magnitud')
 urlM = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MAYORvalor.csv'
 datosM = pd.read_csv(urlM, sep=',')
 st.table(datosM)
 
 #MAPA MAYOR
-st.write('*Mapa 3. Los 10 primeros valores con mayor magnitud*')
+st.write('Mapa 3. Los 10 valores con mayor magnitud')
+df_mapa3 = pd.read_csv('MAYORvalor.csv')
+df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
+st.map(df3)
 
 
 #TABLA MENOR
-st.write('Tabla 3. Los 10 primeros valores con menor magnitud')
+st.write('Tabla 3. Los 10 valores con menor magnitud')
 urlm = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MENORvalor.csv'
 datosm = pd.read_csv(urlm, sep=',')
 st.table(datosm)
 
 #MAPA MENOR
-st.write('*Mapa 4. Los 10 primeros valores con menor magnitud*')
-
-#TABLA DE DATOS
-url2= 'https://raw.githubusercontent.com/aname1ba/proyecto/main/2Catalogo1960_2021-lat%26lon%20-%20copia.csv'
-datos2= pd.read_csv(url2, sep=',')
-#st.map(datos2)
-st.table(datos2)
+st.write('Mapa 4. Los 10 valores con menor magnitud')
+df_mapa4 = pd.read_csv('MENORvalor.csv')
+df4 = df_mapa4.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
+st.map(df4)
 
 
 #REFERENCIAS
 st.subheader('Referencias')
-st.write('1. Indtituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
+st.write('1. Instituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
 
 
 

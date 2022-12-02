@@ -31,7 +31,10 @@ st.write('Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
 df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
-
+st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
+st.write(' ')
+st.write(' ')
+st.write(' ')
 
 #gráfica
 st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1 ')

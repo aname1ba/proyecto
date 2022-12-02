@@ -22,7 +22,7 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 
 
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
-st.subheader('Presentación del Catálogo Sísmico')
+st.subheader('1. Presentación del Catálogo Sísmico')
 st.write('Para visualizar la información completa contenida en el catálogo sísmico registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
 st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el Mapa 1 en donde se puede observar que la mayor cantidad de casos se da en aquellas zonas que se encuentren relativamente cercanas al Océano Pacífico.')
 
@@ -50,7 +50,7 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
 st.write(' ')
 st.write(' ')
-st.subheader('Resumen')
+st.subheader('2. Resumen')
 st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se tomo un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
 
 #resumen
@@ -75,8 +75,8 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
 st.write(' ')
-st.subheader('Sismos con mayor magnitud')
-st.write('Se ordenaron las ***Magnitudes*** registradas de mayor a menor proporcionadas por el catálogo sísmico y se seleccionaron los 10 valores con mayor magnitud, los resultados fueron presentadas en la Tabla 2.')
+st.subheader('3. Sismos con mayor magnitud')
+st.write('Las ***Magnitudes*** proporcionadas por el catálogo sísmico fueron ordenadas de mayor a menor y a partir de ello, se seleccionaron los 10 valores con mayor magnitud registrado. Los resultados fueron presentadas en la Tabla 2.')
 
 
 #tabla

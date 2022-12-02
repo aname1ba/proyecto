@@ -20,16 +20,6 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
-#BARRA LATERAL DE LA PÁGINA
-with st.sidebar:
-    selected = option_menu(
-        menu_title= 'Menu principal',
-        options = ['Inicio', 'Resumen', 'Sismo de mayor magnitud', 'Sismo de menor magnitud','¿Quiénes somos?'],
-        icons=['house','book','book','book','people'],
-        menu_icon='cast',
-        default_index=0,
-        #orientation='horizontal',
-    )
 
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
 st.subheader('Presentación del Catálogo Sísmico')
@@ -47,7 +37,7 @@ st.write(' ')
 st.write(' ')
 
 
-st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1 de dónde se puede observar con mayor facilidad la fecha ')
+st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1, en el cual se visualiza con mayor facilidad la fecha con mayor y menor magnitud de sismos registrados.')
 
 st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 horas 33 minutos, ocurrio un terremoto destructor de una magnitud de 8.4 que afectó el Sur del Perú, particularmente los Departamentos de Moquegua, Tacna y Arequipa. Este sismo tuvo características importantes entre las que se destaca la complejidad de su registro y ocurrencia. El terremoto ha originado varios miles de post-sacudidas o réplicas y alcanzó una intensidad máxima de VIII. Las localidades más afectadas por el terremoto fueron las ciudades de Moquegua, Tacna, Arequipa, Valle de Tambo, Caravelí, Chuquibamba, Ilo, algunos pueblos del interior y Camaná por el efecto del Tsunami.')
 

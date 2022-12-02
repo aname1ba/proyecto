@@ -38,14 +38,14 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 
 #RESUMEN de los datos
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')
-urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_Catalogo_Sismos1960-2021.csv'
+urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_catalogo_sismos.csv'
 datosr = pd.read_csv(urlr, sep=',')
 st.table(datosr)
 
 
 #MAPA del resumen
 st.write('*Mapa 2. Resumen de 21 datos aleatorios*')
-df_mapa2 = pd.read_csv('Resumen_Catalogo_Sismos1960-2021.csv')
+df_mapa2 = pd.read_csv('Resumen_catalogo_sismos.csv')
 df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df2)
 
@@ -76,10 +76,11 @@ df4 = df_mapa4.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df4)
 
 
+
 #REFERENCIAS
 st.subheader('Referencias')
 st.write('1. Instituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
 
 
 
-
+st. write('Dashboard elaborado por: Achic, S., Fernández, A. y Valle, B.')

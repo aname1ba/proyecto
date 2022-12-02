@@ -64,7 +64,7 @@ st.map(df2)
 
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
-st.subheader('Sismos con mayor magnitud registrado')
+st.subheader('Sismos con mayor magnitud')
 
 #tabla
 st.write('*Tabla 2. Los 10 valores con mayor magnitud*')
@@ -79,7 +79,7 @@ df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df3)
 
 #SUBHEADER 4: TABLA Y MAPA DE LOS VALORES CON MENOR MAGNITUD
-st.subheader('Sismos con menor magnitud registrado')
+st.subheader('Sismos con menor magnitud')
 
 #tabla
 st.write('*Tabla 3. Los 10 valores con menor magnitud*')

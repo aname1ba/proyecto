@@ -20,6 +20,16 @@ st.write('A nivel mundial, el Perú es uno de los países de mayor potencial sí
 
 st.write('En este contexto, la actividad sísmica en torno de la placa del Pacífico, es debida a los diversos procesos de convergencia de placas con velocidades de hasta 8 cm/año. En América del Sur, en su borde occidental, son las placas de Nazca y Sudamericana las que convergen y desarrollan el proceso de subducción mediante el cual, la placa oceánica de Nazca se introduce por debajo de la continental o Sudamericana. Este proceso es el causante de la geodinámica activa del país y por ende, de una importante actividad sísmica, volcánica y efectos asociados.')
 
+#BARRA LATERAL DE LA PÁGINA
+with st.sidebar:
+    selected = option_menu(
+        menu_title= 'Menu principal',
+        options = ['Inicio', 'Resumen', 'Sismo de mayor magnitud', 'Sismo de menor magnitud','¿Quiénes somos?'],
+        icons=['house','book','book','book','people'],
+        menu_icon='cast',
+        default_index=0,
+        #orientation='horizontal',
+    )
 
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
 st.subheader('Presentación del Catálogo Sísmico')

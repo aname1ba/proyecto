@@ -111,7 +111,8 @@ df_mapa4 = pd.read_csv('MENORvalor.csv')
 df4 = df_mapa4.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df4)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
-
+st.write(' ')
+st.write(' ')
 
 #SUBHEADER 5: REFERENCIAS
 st.subheader('Referencias')

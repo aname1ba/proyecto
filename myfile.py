@@ -49,13 +49,20 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
 st.subheader('Resumen')
-st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
+st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se tomo un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
 
 #resumen
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')
 urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_Catalogo_Sismos1960-2021.csv'
 datosr = pd.read_csv(urlr, sep=',')
 st.table(datosr)
+
+st.write(' ')
+st.write(' ')
+st.write(' ')
+
+
+st.write('En el Mapa 2 se representa los 21 puntos obtenidos de forma aleatoriamente de la Tabla 1 en el mapa.')
 
 #mapa
 st.write('*Mapa 2. Resumen de 21 datos aleatorios*')

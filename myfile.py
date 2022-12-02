@@ -48,6 +48,8 @@ print(datos)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
+st.write(' ')
+st.write(' ')
 st.subheader('Resumen')
 st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se tomo un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
 
@@ -72,6 +74,8 @@ st.map(df2)
 
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
+st.write(' ')
+st.write(' ')
 st.subheader('Sismos con mayor magnitud')
 
 #tabla
@@ -87,6 +91,8 @@ df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df3)
 
 #SUBHEADER 4: TABLA Y MAPA DE LOS VALORES CON MENOR MAGNITUD
+st.write(' ')
+st.write(' ')
 st.subheader('Sismos con menor magnitud')
 
 #tabla

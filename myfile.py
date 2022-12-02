@@ -21,7 +21,7 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 st.write('Para visualizar la tabla completa de todos los datos registrados por el IGP visita el siguiente [Link](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
 
 #MAPA todos los datos 
-st.write('Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
+st.write('*Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP*')
 df_mapa=pd.read_csv('Catalogo1960_2021.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
@@ -29,7 +29,7 @@ st.map(df)
 
 
 #GRÁFICA FECHA VS MAGNITUD
-st.write('Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC')
+st.write('*Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC*')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 print(datos)
 
@@ -37,40 +37,40 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 
 
 #RESUMEN de los datos
-st.write('Tabla 1. Resumen de 21 datos aleatorios')
+st.write('*Tabla 1. Resumen de 21 datos aleatorios*')
 urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_catalogo_sismos.csv'
 datosr = pd.read_csv(urlr, sep=',')
 st.table(datosr)
 
 
 #MAPA del resumen
-st.write('Mapa 2. Resumen de 21 datos aleatorios')
+st.write('*Mapa 2. Resumen de 21 datos aleatorios*')
 df_mapa2 = pd.read_csv('Resumen_catalogo_sismos.csv')
 df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df2)
 
 
 #TABLA MAYOR
-st.write('Tabla 2. Los 10 valores con mayor magnitud')
+st.write('*Tabla 2. Los 10 valores con mayor magnitud*')
 urlM = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MAYORvalor.csv'
 datosM = pd.read_csv(urlM, sep=',')
 st.table(datosM)
 
 #MAPA MAYOR
-st.write('Mapa 3. Los 10 valores con mayor magnitud')
+st.write('*Mapa 3. Los 10 valores con mayor magnitud*')
 df_mapa3 = pd.read_csv('MAYORvalor.csv')
 df3 = df_mapa3.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df3)
 
 
 #TABLA MENOR
-st.write('Tabla 3. Los 10 valores con menor magnitud')
+st.write('*Tabla 3. Los 10 valores con menor magnitud*')
 urlm = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MENORvalor.csv'
 datosm = pd.read_csv(urlm, sep=',')
 st.table(datosm)
 
 #MAPA MENOR
-st.write('Mapa 4. Los 10 valores con menor magnitud')
+st.write('*Mapa 4. Los 10 valores con menor magnitud*')
 df_mapa4 = pd.read_csv('MENORvalor.csv')
 df4 = df_mapa4.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df4)

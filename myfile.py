@@ -81,6 +81,5 @@ st.map(df4)
 st.subheader('Referencias')
 st.write('1. Instituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
 
-
-
+#DATOS
 st. write('Dashboard elaborado por: Achic, S., Fernández, A. y Valle, B.')

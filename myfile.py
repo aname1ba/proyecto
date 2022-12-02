@@ -38,14 +38,14 @@ st.write('Como se puede ver en la Gráfica 1, el 23 de Junio de 2001 a las 15 ho
 
 #RESUMEN de los datos
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')
-urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_catalogo_sismos.csv'
+urlr = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Resumen_Catalogo_Sismos1960-2021.csv'
 datosr = pd.read_csv(urlr, sep=',')
 st.table(datosr)
 
 
 #MAPA del resumen
 st.write('*Mapa 2. Resumen de 21 datos aleatorios*')
-df_mapa2 = pd.read_csv('Resumen_catalogo_sismos.csv')
+df_mapa2 = pd.read_csv('Resumen_Catalogo_Sismos1960-2021.csv')
 df2 = df_mapa2.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df2)
 

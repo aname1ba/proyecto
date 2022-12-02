@@ -24,7 +24,7 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
 st.subheader('Presentación del Catálogo Sísmico')
 st.write('Para visualizar la información completa contenida en el catálogo sísmico registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
-st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el Mapa 1')
+st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el Mapa 1 en donde se puede observar que la mayor cantidad de casos se da en aquellas zonas que se encuentren relativamente cercanas al Océano Pacífico.')
 
 #mapa
 st.write('Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
@@ -34,7 +34,8 @@ st.map(df)
 
 
 #gráfica
-st.write('Asimismo, la ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1')
+st.write('')
+st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1 ')
 st.write('*Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC*')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
 print(datos)

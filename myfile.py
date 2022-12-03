@@ -117,6 +117,7 @@ st.write(' ')
 st.write(' ')
 
 #mapa
+st.write('La ***Latitud*** y ***Longitud*** de los datos de la Tabla 3 fueron presentados en el Mapa 4 del cual se puede llegar a concluir que el epicentro de los sismos de menor magnitud son más propensos a ser registrados en el sur de Perú.')
 
 st.write('*Mapa 4. Los 10 valores con menor magnitud registrados en el catálogo sísmico del IGP*')
 df_mapa4 = pd.read_csv('MENORvalor.csv')

@@ -22,7 +22,7 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 
 
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
-st.subheader('1. Presentación del Catálogo Sísmico')
+st.subheader('Presentación del Catálogo Sísmico')
 st.write('Para visualizar la información completa contenida en el catálogo sísmico registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
 st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el Mapa 1 en donde se puede observar que la mayor cantidad de casos se da en aquellas zonas que se encuentren relativamente cercanas al Océano Pacífico.')
 
@@ -41,6 +41,11 @@ st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica
 
 st.write('El 23 de Junio de 2001 a las 15 horas con 33 minutos, ocurrio un terremoto destructor de una magnitud de 8.4 que afectó el Sur del Perú, particularmente los Departamentos de Moquegua, Tacna y Arequipa. Este sismo tuvo características importantes entre las que se destaca la complejidad de su registro y ocurrencia. El terremoto ha originado varios miles de post-sacudidas o réplicas y alcanzó una intensidad máxima de VIII. Las localidades más afectadas por el terremoto fueron las ciudades de Moquegua, Tacna, Arequipa, Valle de Tambo, Caravelí, Chuquibamba, Ilo, algunos pueblos del interior y Camaná por el efecto del Tsunami.[^1]')
 
+#lista de selección
+#n = st.slider(step=1)
+chart_data = pd.read_csv('Catalogo_sismos_nuevoformato.csv')
+cd = chart_data.rename(columns={'FECHA_UTC':'date', 'MAGNITUD':'mag'})
+st.line_chart(chart_data)
 #gráfica
 st.write('*Gráfica 1. Magnitud de sismos desde 1960 hasta 2021 contra Fecha UTC*')
 st.line_chart(data=datos, x='FECHA_UTC', y='MAGNITUD')
@@ -50,7 +55,7 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 #SUBHEADER 2: RESUMEN Y MAPA DEL CATÁLOGO
 st.write(' ')
 st.write(' ')
-st.subheader('2. Resumen')
+st.subheader('Resumen')
 st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se tomo un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
 
 #resumen
@@ -75,8 +80,8 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
 st.write(' ')
-st.subheader('3. Sismos con mayor magnitud')
-st.write('Las ***Magnitudes*** proporcionadas por el catálogo sísmico fueron ordenadas de mayor a menor y a partir de ello, se seleccionaron los 10 valores con mayor magnitud registrado. Los resultados fueron presentadas en la Tabla 2.')
+st.subheader('Sismos con mayor magnitud')
+st.write('Se ordenaron las ***Magnitudes*** registradas de mayor a menor proporcionadas por el catálogo sísmico y se seleccionaron los 10 valores con mayor magnitud, los resultados fueron presentadas en la Tabla 2.')
 
 
 #tabla

@@ -8,7 +8,7 @@ import urllib.request
 st.title('Tabla de los sismos ocurridos en el Perú desde 1960 hasta el 2021 según el IGP')
 
 st.write('El presente catálogo ha sido elaborado por el Instituto Geofísico del Perú (IGP), para descargar el archivo original entrar al siguiente') 
-st.button('enlace'(https://www.datosabiertos.gob.pe/dataset/catalogo-sismico-1960-2021-igp))
+st.button('enlace')https://www.datosabiertos.gob.pe/dataset/catalogo-sismico-1960-2021-igp
 
 url = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo_sismos_nuevoformato.csv'
 datos = pd.read_csv(url, sep=',')

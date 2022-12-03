@@ -10,8 +10,8 @@ import urllib.request
 url = "https://raw.githubusercontent.com/aname1ba/proyecto/main/Catalogo_sismos_nuevoformato.csv"
 datos = pd.read_csv(url, sep=',')
 
-#TITULO
 st.write('Dashboard elaborado por: Achic, S., Fernández, A. y Valle, B.')
+#TITULO
 st.title('Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
 
 

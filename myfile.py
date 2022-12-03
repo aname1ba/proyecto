@@ -24,20 +24,18 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
 st.subheader('1. Presentación del Catálogo Sísmico')
 st.write('Para visualizar la información completa contenida en el catálogo sísmico registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
-st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el Mapa 1 en donde se puede observar que la mayor cantidad de casos se da en aquellas zonas que se encuentren relativamente cercanas al Océano Pacífico.')
+st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el *Mapa 1* en donde se puede se puede observar a grosso modo que la mayor cantidad de casos se da en aquellas zonas que se encuentren relativamente cercanas al Océano Pacífico.')
 
 #mapa
-st.write('Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP')
+st.write('*Mapa 1. Sismos en el Perú desde 1960 hasta el 2021 según el IGP*')
 df_mapa=pd.read_csv('Catalogo_sismos_nuevoformato.csv')
 df =  df_mapa.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 st.write(' ')
 st.write(' ')
-st.write(' ')
 
-
-st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1, en el cual se visualiza con mayor facilidad la fecha con mayor y menor magnitud de sismos registrados.')
+st.write('La ***Magnitud*** vs ***Fecha UTC*** fueron presentados en la Gráfica 1, en donde se visualiza con mayor facilidad la fecha con mayor y menor magnitud de sismos registrados por el IGP.')
 
 st.write('El 23 de Junio de 2001 a las 15 horas con 33 minutos, ocurrio un terremoto destructor de una magnitud de 8.4 que afectó el Sur del Perú, particularmente los Departamentos de Moquegua, Tacna y Arequipa. Este sismo tuvo características importantes entre las que se destaca la complejidad de su registro y ocurrencia. El terremoto ha originado varios miles de post-sacudidas o réplicas y alcanzó una intensidad máxima de VIII. Las localidades más afectadas por el terremoto fueron las ciudades de Moquegua, Tacna, Arequipa, Valle de Tambo, Caravelí, Chuquibamba, Ilo, algunos pueblos del interior y Camaná por el efecto del Tsunami.[^1]')
 
@@ -51,7 +49,7 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 st.write(' ')
 st.write(' ')
 st.subheader('2. Resumen')
-st.write('Desde 1960 a 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se tomo un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
+st.write('Desde 1960 al 2021, se juntaron 3 años consecutivos y se separaron dando un conjunto de 21 grupos. A partir de los grupos formados se tomo un valor aleatorio por grupo para la elaboración del presente resumen. Es por ello que en la Tabla 1 se puede observar que cada valor aleatorio se encuentra contenido en cierto rango de años, esto fue elaborado con el fin de tener una distribución más representativa de los valores obtenidos.')
 
 #resumen
 st.write('*Tabla 1. Resumen de 21 datos aleatorios*')

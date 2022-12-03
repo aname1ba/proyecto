@@ -60,7 +60,7 @@ st.write(' ')
 st.write(' ')
 
 #mapa
-st.write('La ***Latitud*** y ***Longitud*** provenientes de la *Tabla 1* fueron presentados en el *Mapa 2*, en donde se evidencia una distribución representativa en el mapa del Perú.')
+st.write('La ***Latitud*** y ***Longitud*** provenientes de la *Tabla 1* fueron presentados en el *Mapa 2*, en donde se evidencia una distribución representativa de los puntos en el mapa.')
 
 st.write('*Mapa 2. Resumen del catálogo sísmico representado por 21 puntos escogidos al azar*')
 df_mapa2 = pd.read_csv('Resumen_Catalogo_Sismos1960-2021.csv')

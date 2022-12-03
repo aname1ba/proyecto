@@ -76,18 +76,22 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 #SUBHEADER 3: TABLA Y MAPA DE LOS VALORES CON MAYOR MAGNITUD
 st.write(' ')
 st.subheader('3. Sismos con mayor magnitud')
-st.write('Las ***Magnitudes*** proporcionadas por el catálogo sísmico fueron ordenadas de mayor a menor y a partir de ello, se seleccionaron los 10 valores con mayor magnitud registrado. Los resultados fueron presentados en la Tabla 2.')
+st.write('Las ***Magnitudes*** proporcionadas por el catálogo sísmico fueron ordenadas de mayor a menor y a partir de ello se seleccionaron los 10 valores con mayor magnitud registrado. Los resultados fueron presentados en la Tabla 2.')
 
 
 #tabla
-st.write('*Tabla 2. Los 10 valores con mayor magnitud*')
+st.write('*Tabla 2. Los 10 valores con mayor magnitud registrados en el catálogo sísmico del IGP*')
 urlM = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MAYORvalor.csv'
 datosM = pd.read_csv(urlM, sep=',')
 st.table(datosM)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
+st.write(' ')
+st.write(' ')
+st.write(' ')
+
 #mapa
-st.write('La Latitud y Longitud de la Tabla 2 fueron presentados en el Mapa 3 del cual se puede apreciar que el epicentro de los sismos registrados se encuentran mas propensos a ser ubicados en el Océano Pacífico.')
+st.write('La ***Latitud*** y ***Longitud*** de la Tabla 2 fueron presentados en el Mapa 3 del cual se puede llegar a concluir que el epicentro de los sismos de mayor magnitud son más propensos a ser registrados en el Océano Pacífico.')
 
 st.write('*Mapa 3. Los 10 valores con mayor magnitud registrado*')
 df_mapa3 = pd.read_csv('MAYORvalor.csv')
@@ -98,18 +102,23 @@ st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 #SUBHEADER 4: TABLA Y MAPA DE LOS VALORES CON MENOR MAGNITUD
 st.write(' ')
 st.write(' ')
-st.subheader('Sismos con menor magnitud')
-st.write('Del catálogo sísmico se ordenaron las ***Magnitudes*** registradas de menor a mayor y se seleccionaron los 10 primeros valores  fueron presentadas en la Tabla 2.')
+st.subheader('4. Sismos con menor magnitud')
+st.write('Se ordenó de menor a mayor las ***Magnitudes*** presentadas en el catálogo sísmico y se seleccionaron los 10 primeros valores para posteriormente ser presentadas en la Tabla 3.')
 
 #tabla
-st.write('*Tabla 3. Los 10 valores con menor magnitud*')
+st.write('*Tabla 3. Los 10 valores con menor magnitud registrados en el catálogo sísmico del IGP*')
 urlm = 'https://raw.githubusercontent.com/aname1ba/proyecto/main/MENORvalor.csv'
 datosm = pd.read_csv(urlm, sep=',')
 st.table(datosm)
 st.write('Fuente: IGP (2022) *Catálogo Sismico 1960-2021*')
 
+st.write(' ')
+st.write(' ')
+st.write(' ')
+
 #mapa
-st.write('*Mapa 4. Los 10 valores con menor magnitud*')
+
+st.write('*Mapa 4. Los 10 valores con menor magnitud registrados en el catálogo sísmico del IGP*')
 df_mapa4 = pd.read_csv('MENORvalor.csv')
 df4 = df_mapa4.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df4)

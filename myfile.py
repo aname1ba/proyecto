@@ -118,6 +118,6 @@ st.write(' ')
 
 #SUBHEADER 5: REFERENCIAS
 st.subheader('Referencias')
-st.write('[^1]: Instituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
-
+st.write('[1]: Instituto Nacional de Defensa Civil (2006) Sismos ocurridos en el Perú a través del tiempo. Compendio Estadístico de Prevención y Atención de Desastres 2006. Recuperado de: https://www.indeci.gob.pe/compend_estad/2006/7_otras_estad/7.1_sismos/7.1.4_hist_sismos.pdf')
+st.write('[2]: Instituto Geofísico del Perú (2022) Catálogo sísmico 1960-2021. Recuperado de: https://www.datosabiertos.gob.pe/dataset/catalogo-sismico-1960-2021-igp')
 

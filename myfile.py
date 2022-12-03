@@ -23,7 +23,7 @@ st.write('En este contexto, la actividad sísmica en torno de la placa del Pací
 
 #SUBHEADER 1: MAPA DE TODOS LOS DATOS Y GRÁFICA (FECHA VS MAGNITUD)
 st.subheader('1. Presentación del Catálogo Sísmico')
-st.write('Para visualizar la información completa contenida en el catálogo sísmico registrados por el IGP visita el siguiente [enlace](https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
+st.write('Para visualizar la información completa contenida en el catálogo sísmico registrados por el IGP visita el siguiente st.button(['enlace'])(https://aname1ba-proyecto-myfile1-m5nrdf.streamlit.app/).')
 st.write('La ***Longitud*** y ***Latitud*** obtenidas del catálogo sísmico fueron ubicados en el *Mapa 1* en donde se puede observar a grosso modo que la mayor cantidad de casos se da en aquellas zonas que se encuentran relativamente cercanas al Océano Pacífico.')
 
 #mapa
